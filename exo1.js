@@ -1,4 +1,4 @@
-//The goal is to run an algorithme that return the first occurence of a unique value in an array
+//The goal is to run an algorithm that return the first occurence of a unique value in an array
 
 // Exemple for [1,2,3,5,4,3,2,1] it should return 4
 
