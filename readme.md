@@ -38,6 +38,12 @@ console.log('array.slice()', array.slice())
 //['A','B','C','D']
 ```
 
+#### splice
+
+slice is used to add or remove into an array.
+<br/> The first argument is the first position to start from, it is included in the sub-array.
+<br/> The second argument is the number of elements to remove
+
 
 
 
