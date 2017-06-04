@@ -1,4 +1,4 @@
-#Trainig js repo
+# Trainig js repo
 
 This repo is aimed to provide some algorithmic and js examples in order to perform my code.
 
@@ -6,11 +6,11 @@ This repo is aimed to provide some algorithmic and js examples in order to perfo
 
 ## Javascript
 
-###Useful function
+### Useful function
 
-####Array
+#### Array
 
-#####forEach
+##### forEach
 
 ```javascript
 listTest = [1,2,3];
