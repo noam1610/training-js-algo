@@ -1,11 +1,13 @@
 const getFirstUniqueElementInArray = (arr) => {
-  let copyOfArr;
-  for (let i = 0; i < arr.length; i += 1) {
-    copyOfArr = arr.slice();
-    copyOfArr.splice(i, 1);
-    if (copyOfArr.indexOf(arr[i]) === -1) return arr[i];
-  }
-  return -1;
+    let copyOfArr;
+    for (let i = 0; i < arr.length; i += 1) {
+        copyOfArr = arr.slice();
+        console.log('copyOfArr', copyOfArr)
+        copyOfArr.splice(i, 1);
+        console.log('copyOfArr', copyOfArr)
+        if (copyOfArr.indexOf(arr[i]) === -1) return arr[i];
+    }
+    return -1;
 };
 
 const arr1 = [1, 2, 2, 2, 2, 5, 7, 8, 9, 10, 1, 1];
