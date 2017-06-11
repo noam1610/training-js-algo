@@ -1,6 +1,6 @@
-# Trainig js repo
+# Training js repo
 
-This repo is aimed to provide some algorithmic and js examples in order to perform my code.
+This repo is aimed at providing some algorithmic and js examples in order to improve my code.
 
 ## Algorithmic skills
 
