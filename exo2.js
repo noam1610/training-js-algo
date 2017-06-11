@@ -4,9 +4,11 @@
 
 function getNumberOfSquare(A, B) {
 
-    var A_use = A >= 0 ? A : 0;
+    var A_use = Math.max(0, A);
 
-    if (B < 0) {
+    if (B < A) {
+        return 0;
+    } else if (B < 0) {
         return 0;
     } else if (A_use === B && Math.floor(Math.sqrt(B)) === Math.sqrt(B)) {
         return 1;
@@ -17,26 +19,13 @@ function getNumberOfSquare(A, B) {
     }
 }
 
-var listTest = [
-    [3, 4],
-    [2, 9],
-    [4, 16],
-    [20, 23],
-    [1, 10],
-    [2, 34],
-    [7, 7],
-    [7, 8],
-    [4, 4],
-    [8, 9],
-    [-8, 9],
-    [-1, 10],
-    [-2, -34],
-    [-4, -4],
-    [-3, 2],
-    [-5, -5],
-
-]
+var listTest = []
+for (var i = 0; i < 10; i++) {
+    var value1 = Math.floor(Math.random(0, 1) * 100 - 50);
+    var value2 = Math.floor(Math.random(0, 1) * 100 - 50);
+    listTest.push([value1, value2])
+}
 
 listTest.forEach(function(item) {
-    console.log(item[0] + ' - ' + item[1] + ' --> ' + getNumberOfSquare(item[0], item[1]))
+    console.log(item[0] + ' / ' + item[1] + ' --> ' + getNumberOfSquare(item[0], item[1]))
 })
