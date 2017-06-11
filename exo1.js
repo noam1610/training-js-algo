@@ -4,7 +4,7 @@
 
 // If there is on duplicate value it should return -1
 
-function solution(table) {
+function getFirstUniqueValue(table) {
     var arrayOccurence = {};
     for (var i = 0; i < table.length; i++) {
         if (!arrayOccurence[table[i]]) {
@@ -18,17 +18,17 @@ function solution(table) {
         }
     }
 
-    var valueReturn = -1;
+    var firstUniqueValue = -1;
     var firstPosition = table.length + 1;
 
     for (item in arrayOccurence) {
-        element = arrayOccurence[item];
-        if (element.occurence == 1 && element.firstPosition < firstPosition) {
-            valueReturn = element.value;
-            firstPosition = element.firstPosition;
+        item = arrayOccurence[item];
+        if (item.occurence == 1 && item.firstPosition < firstPosition) {
+            firstUniqueValue = item.value;
+            firstPosition = item.firstPosition;
         }
     }
-    return valueReturn;
+    return firstUniqueValue;
 
 }
 
@@ -37,7 +37,7 @@ var arr2 = [7, 1, 2, 2, 2, 2, 5, 5, 9, 8, 7, 8, 9, 1, 1];
 var arr3 = [1, 2, 2, 2, 2, 50, 7, 8, 9, 10, 1, 1];
 var arr4 = [1, 1, 4];
 
-console.log(arr1 + ' --- --- - >' + solution(arr1));
-console.log(arr2 + ' --- --- - >' + solution(arr2));
-console.log(arr3 + ' --- --- - >' + solution(arr3));
-console.log(arr4 + ' --- --- - >' + solution(arr4));
+console.log(arr1 + ' --- --- - >' + getFirstUniqueValue(arr1));
+console.log(arr2 + ' --- --- - >' + getFirstUniqueValue(arr2));
+console.log(arr3 + ' --- --- - >' + getFirstUniqueValue(arr3));
+console.log(arr4 + ' --- --- - >' + getFirstUniqueValue(arr4));
