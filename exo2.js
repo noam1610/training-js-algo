@@ -5,7 +5,6 @@
 const getNumberOfSquare = (A, B) => {
 
     let A = Math.max(0, A);
-
     if (B < A) {
         return 0;
     } else if (B < 0) {
@@ -18,8 +17,6 @@ const getNumberOfSquare = (A, B) => {
         return Math.floor(Math.sqrt(B)) - Math.floor(Math.sqrt(A));
     }
 }
-
-
 
 const generateArrayOfTestingInput = (min, max, size) => {
     let listTest = []
