@@ -8,6 +8,8 @@ This repo is aimed at providing some algorithmic and js examples in order to imp
 
 ### Array
 
+[link for MDN] : https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/prototype?v=example
+
 #### forEach
 Go through an array and return the value
 
@@ -98,6 +100,34 @@ var b = a.shift();
 console.log(a); // [2, 3]
 console.log(b); // 1
 ```
+
+#### sort
+
+The sort() method sorts the elements of an array in place and returns the array. The sort is not necessarily stable. The default sort order is according to string Unicode code points.
+
+```javascript
+var scores = [1, 10, 21, 2]; 
+scores.sort(); // [1, 10, 2, 21]
+
+var items = [
+    { name: 'Edward', value: 21 },
+    { name: 'Sharpe', value: 37 },
+    { name: 'And', value: 45 },
+    { name: 'The', value: -12 },
+    { name: 'Magnetic', value: 13 },
+    { name: 'Zeros', value: 37 }
+];
+
+
+items.sort(function(a, b) {
+    return a.value - b.value;
+});
+
+console.log(items)
+
+```
+
+
 
 
 
