@@ -64,10 +64,40 @@ arr.copyWithin(target, start, end)
 **start** index at which to start copying elements from
 **end** index at which to end copying elements from
 
+```javascript
+[1, 2, 3, 4, 5].copyWithin(-2);
+// [1, 2, 3, 1, 2]
+
+[1, 2, 3, 4, 5].copyWithin(0, 3);
+// [4, 5, 3, 4, 5]
+
+[1, 2, 3, 4, 5].copyWithin(0, 3, 4);
+// [4, 2, 3, 4, 5]
+```
 
 
+#### reverse
+
+Reverse the order of an array
+
+```javascript
+var a = ['one', 'two', 'three'];
+a.reverse(); 
+console.log(a); // ['three', 'two', 'one']
+```
 
 
+#### shift
+
+The shift() method **removes the first element** from an array and returns that element. This method changes the length of the array.
+
+```javascript
+var a = [1, 2, 3];
+var b = a.shift();
+
+console.log(a); // [2, 3]
+console.log(b); // 1
+```
 
 
 
