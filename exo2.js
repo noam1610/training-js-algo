@@ -2,9 +2,9 @@
 
 // For example you should return 3 for [3, 18] because 2*2 = 4, 3*3 = 9 , 4*4 = 16
 
-function getNumberOfSquare(A, B) {
+const getNumberOfSquare = (A, B) => {
 
-    var A = Math.max(0, A);
+    let A = Math.max(0, A);
 
     if (B < A) {
         return 0;
@@ -21,17 +21,17 @@ function getNumberOfSquare(A, B) {
 
 
 
-var generateArrayOfTestingInput = function(min, max, size) {
-    var listTest = []
-    for (var i = 0; i < size; i++) {
-        var value1 = Math.floor(Math.random(0, 1) * (max - min) + min);
-        var value2 = Math.floor(Math.random(0, 1) * (max - value1) + value1);
-        listTest.push([value1, value2])
+const generateArrayOfTestingInput = (min, max, size) => {
+    let listTest = []
+    for (let i = 0; i < size; i++) {
+        let value1 = Math.floor(Math.random(0, 1) * (max - min) + min);
+        let value2 = Math.floor(Math.random(0, 1) * (max - min) + min);
+        listTest.push([Math.min(value1, value2), Math.max(value1, value2)]);
     }
     return listTest;
 }
 
-var testList = generateArrayOfTestingInput(-50, 50, 100);
+let testList = generateArrayOfTestingInput(-50, 50, 100);
 testList.forEach(function(item) {
     console.log(item[0] + ' / ' + item[1] + ' --> ' + getNumberOfSquare(item[0], item[1]))
 })
