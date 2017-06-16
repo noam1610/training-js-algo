@@ -4,7 +4,7 @@
 
 const getNumberOfSquare = (A, B) => {
 
-    let A = Math.max(0, A);
+    const A = Math.max(0, A);
     if (B < A) {
         return 0;
     } else if (B < 0) {
@@ -19,7 +19,7 @@ const getNumberOfSquare = (A, B) => {
 }
 
 const generateArrayOfTestingInput = (min, max, size) => {
-    let listTest = []
+    const listTest = [];
     for (let i = 0; i < size; i++) {
         let value1 = Math.floor(Math.random(0, 1) * (max - min) + min);
         let value2 = Math.floor(Math.random(0, 1) * (max - min) + min);
@@ -28,7 +28,7 @@ const generateArrayOfTestingInput = (min, max, size) => {
     return listTest;
 }
 
-let testList = generateArrayOfTestingInput(-50, 50, 100);
-testList.forEach(function(item) {
+const testList = generateArrayOfTestingInput(-50, 50, 100);
+testList.forEach((item) => {
     console.log(item[0] + ' / ' + item[1] + ' --> ' + getNumberOfSquare(item[0], item[1]))
 })
