@@ -1,16 +1,11 @@
 //This file is only used to test some code
-var items = [
-    { name: 'Edward', value: 21 },
-    { name: 'Sharpe', value: 37 },
-    { name: 'And', value: 45 },
-    { name: 'The', value: -12 },
-    { name: 'Magnetic', value: 13 },
-    { name: 'Zeros', value: 37 }
-];
+var test = 100;
+var test2 = 100;
+var test3 = 100;
+var test4 = 100;
 
 
-items.sort(function(a, b) {
-    return a.value - b.value;
-});
-
-console.log(items)
+console.log(test.toString(10));
+console.log(test2.toString(20));
+console.log(test3.toString(30));
+console.log(test4.toString());
